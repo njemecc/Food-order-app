@@ -8,11 +8,8 @@ const HeaderCartButton = props => {
   const cartCtx = useContext(CartContext);
 
   const numberOfCartItem = cartCtx.items.reduce((curNumber, item) => {
-    console.log(curNumber, item);
     return curNumber + item.amount;
   }, 0);
-
-  console.log(numberOfCartItem);
 
   return (
     <button className={styles.button} onClick={props.onClick}>
